@@ -1,17 +1,18 @@
 import React from "react";
 import { Text, StyleSheet, View, Button } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 
 const DetailScreen = ({ navigation }) => {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text style={styles.bigText}>FarmDetail</Text>
+      <Text style={styles.bigText}>Detail Component</Text>
+      <Text />
       <Button
         title="Go to Details... again"
         onPress={() => navigation.push("Details")}
       />
+      <Text></Text>
       <Button title="Go to Home" onPress={() => navigation.navigate("Home")} />
+      <Text></Text>
       <Button title="Go back" onPress={() => navigation.goBack()} />
     </View>
   );
@@ -19,7 +20,7 @@ const DetailScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   bigText: {
-    fontSize: 30,
+    fontSize: 25,
   },
 });
 export default DetailScreen;
